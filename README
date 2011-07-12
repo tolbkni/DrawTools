@@ -1,0 +1,28 @@
+
+Introduction
+===============================================
+DrawTools sample shows how to create a Windows Forms application for drawing graphic objects in a Windows client area using mouse and drawing tools. Drawing tools implemented in this sample are: Rectangle, Ellipse, Line, and Pencil. There are well-known techniques for creating such type of applications, like: interaction with mouse, flicker-free drawing, implementing of drawing and selection tools, objects selection, managing of objects Z-order etc. MFC developers may learn all this stuff from MFC sample DRAWCLI. DrawTools C# program reproduces some of DRAWCLI functionality and uses some design decisions from this sample.
+
+DrawTools solution contains two projects: DrawTools Windows Forms application and DocToolkit Class Library. DrawTools implements specific application stuff, and DocToolkit contains some standard classes for file managing.
+
+ps : this Introduction was written by Alex Fr ( SEE HERE : http://www.codeproject.com/script/Membership/View.aspx?mid=22834 )
+
+
+Tips
+================================================
+1. copy the DrawTools project from codeproject.com( ORIGINAL PROJECT : http://www.codeproject.com/KB/graphics/drawtools.aspx )
+
+2. rewrite the CommandDelete.cs file to fix the order of Undo / Redo
+
+3. add new DrawObject ( Triangle )
+
+
+Target
+================================================
+1. rewrite CommandDelete.cs					-- finished
+
+2. add new DrawObject ( Triangle, just for fun )		-- TODO
+
+3. ...
+
+4. network support ( draw via network on many machines )	-- TODO
