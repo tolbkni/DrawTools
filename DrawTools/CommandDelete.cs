@@ -10,17 +10,25 @@ namespace DrawTools
     class CommandDelete : Command
     {
         List<DrawObject> cloneList;    // contains selected items which are deleted
+        List<int> indexList;           // contains index of selected items which are deleted
 
         // Create this command BEFORE applying Delete All function.
         public CommandDelete(GraphicsList graphicsList)
         {
             cloneList = new List<DrawObject>();
+            indexList = new List<int>();
 
             // Make clone of the list selection.
 
-            foreach(DrawObject o in graphicsList.Selection)
+            int n = graphicsList.Count;
+
+            for (int i = n - 1; i >= 0; i--)
             {
-                cloneList.Add(o.Clone());
+                if (graphicsList[i].Selected)
+                {
+                    cloneList.Add(graphicsList[i].Clone());
+                    indexList.Add(i);
+                }
             }
         }
 
@@ -29,36 +37,24 @@ namespace DrawTools
             list.UnselectAll();
 
             // Add all objects from cloneList to list.
-            foreach(DrawObject o in cloneList)
+
+            int n = cloneList.Count;
+
+            for (int i = n - 1; i >= 0; i--)
             {
-                list.Add(o);
+                list.Insert(indexList[i], cloneList[i]);
             }
         }
 
         public override void Redo(GraphicsList list)
         {
             // Delete from list all objects kept in cloneList
-            
-            int n = list.Count;
 
-            for ( int i = n - 1; i >= 0; i-- )
+            int n = indexList.Count;
+
+            for (int i = n - 1; i >= 0; i--)
             {
-                bool toDelete = false;
-                DrawObject objectToDelete = list[i];
-
-                foreach(DrawObject o in cloneList)
-                {
-                    if ( objectToDelete.ID == o.ID )
-                    {
-                        toDelete = true;
-                        break;
-                    }
-                }
-
-                if ( toDelete )
-                {
-                    list.RemoveAt(i);
-                }
+                list.RemoveAt(indexList[i]);
             }
         }
     }
