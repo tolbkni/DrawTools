@@ -21,7 +21,7 @@ Target
 ================================================
 1. rewrite CommandDelete.cs					-- finished
 
-2. add new DrawObject ( Triangle, just for fun )		-- TODO
+2. add new DrawObject ( Triangle, just for fun )		-- finished
 
 3. ...
 
