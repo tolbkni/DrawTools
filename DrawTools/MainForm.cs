@@ -106,6 +106,10 @@ namespace DrawTools
             CommandEllipse();
         }
 
+        private void toolStripButtonTriangle_Click(object sender, EventArgs e) {
+            CommandTriangle();
+        }
+
         private void toolStripButtonLine_Click(object sender, EventArgs e)
         {
             CommandLine();
@@ -239,6 +243,11 @@ namespace DrawTools
         private void ellipseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CommandEllipse();
+        }
+
+        private void triangleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CommandTriangle();
         }
 
         private void lineToolStripMenuItem_Click(object sender, EventArgs e)
@@ -420,12 +429,14 @@ namespace DrawTools
             toolStripButtonPointer.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Pointer);
             toolStripButtonRectangle.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Rectangle);
             toolStripButtonEllipse.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Ellipse);
+            toolStripButtonTriangle.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Triangle);
             toolStripButtonLine.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Line);
             toolStripButtonPencil.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Polygon);
 
             pointerToolStripMenuItem.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Pointer);
             rectangleToolStripMenuItem.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Rectangle);
             ellipseToolStripMenuItem.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Ellipse);
+            triangleToolStripMenuItem.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Triangle);
             lineToolStripMenuItem.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Line);
             pencilToolStripMenuItem.Checked = (drawArea.ActiveTool == DrawArea.DrawToolType.Polygon);
 
@@ -676,6 +687,13 @@ namespace DrawTools
         private void CommandEllipse()
         {
             drawArea.ActiveTool = DrawArea.DrawToolType.Ellipse;
+        }
+
+        /// <summary>
+        /// Set Triangle draw tool
+        /// </summary>
+        private void CommandTriangle() {
+            drawArea.ActiveTool = DrawArea.DrawToolType.Triangle;
         }
 
         /// <summary>

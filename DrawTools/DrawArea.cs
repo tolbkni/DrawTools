@@ -29,6 +29,7 @@ namespace DrawTools
             Pointer,
             Rectangle,
             Ellipse,
+            Triangle,
             Line,
             Polygon,
             NumberOfDrawTools
@@ -181,6 +182,7 @@ namespace DrawTools
             tools[(int)DrawToolType.Pointer] = new ToolPointer();
             tools[(int)DrawToolType.Rectangle] = new ToolRectangle();
             tools[(int)DrawToolType.Ellipse] = new ToolEllipse();
+            tools[(int)DrawToolType.Triangle] = new ToolTriangle();
             tools[(int)DrawToolType.Line] = new ToolLine();
             tools[(int)DrawToolType.Polygon] = new ToolPolygon();
         }

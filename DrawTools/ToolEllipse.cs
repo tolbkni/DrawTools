@@ -17,6 +17,5 @@ namespace DrawTools
         {
             AddNewObject(drawArea, new DrawEllipse(e.X, e.Y, 1, 1));
         }
-
 	}
 }

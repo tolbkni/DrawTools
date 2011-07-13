@@ -52,6 +52,7 @@
     <Compile Include="DrawObject.cs" />
     <Compile Include="DrawPolygon.cs" />
     <Compile Include="DrawRectangle.cs" />
+    <Compile Include="DrawTriangle.cs" />
     <Compile Include="FrmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +116,7 @@
     <Compile Include="ToolPointer.cs" />
     <Compile Include="ToolPolygon.cs" />
     <Compile Include="ToolRectangle.cs" />
+    <Compile Include="ToolTriangle.cs" />
     <Compile Include="UndoManager.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +133,9 @@
     <EmbeddedResource Include="Line.cur" />
     <EmbeddedResource Include="Pencil.cur" />
     <EmbeddedResource Include="PolyHandle.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Triangle.cur" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
