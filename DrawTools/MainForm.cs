@@ -475,7 +475,7 @@ namespace DrawTools
             drawArea.Left = rect.Left;
             drawArea.Top = rect.Top + menuStrip1.Height + toolStrip1.Height;
             drawArea.Width = rect.Width;
-            drawArea.Height = rect.Height - menuStrip1.Height - toolStrip1.Height; ;
+            drawArea.Height = rect.Height - menuStrip1.Height - toolStrip1.Height;
         }
 
         /// <summary>
