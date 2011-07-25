@@ -12,7 +12,7 @@ namespace DrawTools
 	{
 
         /// <summary>
-        /// Left nous button is pressed
+        /// Left mouse button is pressed
         /// </summary>
         /// <param name="drawArea"></param>
         /// <param name="e"></param>
